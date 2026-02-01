@@ -2,152 +2,165 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#121212">
-<title>ONRICH Mobile Shop | Repair & Accessories in Mumbai</title>
-<meta name="description" content="ONRICH Mobile Shop in Mumbai. New & used phones, mobile repair, screen replacement & accessories. Kurla West & Chembur.">
+
+<title>ONRICH Mobile Shop | Mobile Repair Kurla & Chembur</title>
+
+<meta name="description" content="ONRICH Mobile Shop Mumbai. Mobile repair, screen replacement, accessories & used phones in Kurla West and Chembur.">
+<meta name="keywords" content="mobile repair Kurla, mobile shop Chembur, screen replacement Mumbai, phone repair near me">
+<meta name="author" content="ONRICH Mobile Shop">
 
 <style>
-:root {
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
-    --accent-blue: #007BFF;
-    --text-main: #ffffff;
-    --text-sub: #b0b0b0;
-    --whatsapp-green: #25D366;
-    --footer-bg: #1a1a1a;
-    --toggle-bg: #333;
+:root{
+--bg:#121212;--card:#1e1e1e;--text:#fff;--sub:#aaa;
+--blue:#007BFF;--wa:#25D366;
+}
+[data-theme="light"]{
+--bg:#f5f5f5;--card:#fff;--text:#111;--sub:#555;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui;background:var(--bg);color:var(--text);padding-bottom:120px}
+h2{margin:30px 0 15px;border-left:4px solid var(--blue);padding-left:10px}
+header{position:sticky;top:0;z-index:100;background:var(--card);padding:15px;
+display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
+.brand{font-size:1.6rem;font-weight:800;color:var(--blue)}
+.toggle{cursor:pointer;font-size:1.2rem;background:#333;padding:8px 12px;border-radius:50%}
+
+.hero{
+margin:20px;border-radius:12px;padding:60px 20px;text-align:center;
+background:url("https://images.unsplash.com/photo-1512499617640-c2f999016e90?auto=format&fit=crop&w=900&q=80") center/cover;
+color:white
 }
 
-[data-theme="light"] {
-    --bg-color: #f5f5f5;
-    --card-bg: #ffffff;
-    --accent-blue: #007BFF;
-    --text-main: #111111;
-    --text-sub: #555555;
-    --whatsapp-green: #25D366;
-    --footer-bg: #eaeaea;
-    --toggle-bg: #ddd;
+.container{max-width:650px;margin:auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.card{
+background:var(--card);padding:20px;border-radius:12px;text-align:center;
+border:1px solid #333
+}
+.card span{font-size:2rem;display:block;margin-bottom:10px}
+
+.branch{background:var(--card);padding:20px;border-radius:12px;margin-bottom:15px}
+.branch b{color:var(--blue)}
+
+img{width:100%;border-radius:10px}
+
+input,textarea{
+width:100%;padding:10px;margin-bottom:10px;border-radius:8px;
+border:none;outline:none
 }
 
-* { box-sizing: border-box; margin:0; padding:0; transition: all 0.3s ease; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg-color); color: var(--text-main); padding-bottom:120px; }
-a { text-decoration:none; }
-
-header {
-    background: var(--card-bg); padding: 20px 15px; display:flex; justify-content:space-between; align-items:center; position: sticky; top:0; z-index:100; border-bottom:1px solid #333; }
-.brand-name { font-size:1.8rem; font-weight:800; color: var(--accent-blue); letter-spacing:1px; text-transform:uppercase; }
-.tagline { font-size:0.85rem; color: var(--text-sub); }
-
-.theme-toggle {
-    cursor:pointer; font-size:1.3rem; background: var(--toggle-bg); color: var(--text-main); border-radius:50%; padding:8px 12px; user-select:none;
+button{
+width:100%;padding:12px;border:none;border-radius:8px;
+background:var(--blue);color:white;font-weight:bold
 }
 
-.hero {
-    text-align:center; margin:0 auto;
-    background: url('https://images.unsplash.com/photo-1512499617640-c2f999016e90?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
-    color:white; padding:60px 20px; border-radius:12px; margin:20px;
+.offer{
+border:2px dashed var(--blue);
+background:var(--card);
+padding:15px;border-radius:12px;
+text-align:center;font-weight:bold
 }
-.hero h1 { font-size:2rem; margin-bottom:10px; text-shadow:0 2px 8px rgba(0,0,0,0.5); }
-.hero p { font-size:1.1rem; text-shadow:0 1px 5px rgba(0,0,0,0.5); }
 
-.container { max-width:600px; margin:0 auto; padding:0 20px; }
-
-h2 { font-size:1.3rem; border-left:4px solid var(--accent-blue); padding-left:10px; margin:30px 0 15px; }
-
-.grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
-.card, .branch-card { background:var(--card-bg); padding:20px; border-radius:12px; text-align:center; border:1px solid #333; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-.card:hover, .branch-card:hover { transform: translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
-
-.card-icon { font-size:2rem; margin-bottom:12px; display:block; }
-.card-title { font-size:1rem; font-weight:600; color: var(--text-main); }
-
-.branch-title { color: var(--accent-blue); font-weight:bold; margin-bottom:5px; font-size:1.1rem; }
-.address { color: var(--text-sub); font-size:0.95rem; line-height:1.5; margin-bottom:8px; }
-.get-directions { display:inline-block; margin-top:5px; color: var(--accent-blue); font-weight:600; font-size:0.9rem; }
-
-.sticky-footer {
-    position: fixed; bottom: 0; left: 0; width:100%; background: var(--footer-bg); padding:15px; display:flex; gap:15px; box-shadow:0 -4px 10px rgba(0,0,0,0.5); border-top:1px solid #333; z-index:1000;
+.sticky{
+position:fixed;bottom:0;left:0;width:100%;
+display:flex;gap:10px;padding:15px;background:var(--card)
 }
-.action-btn { flex:1; display:flex; align-items:center; justify-content:center; padding:12px; border-radius:8px; font-weight:bold; font-size:1rem; transition:transform 0.1s; color:white; }
-.action-btn:active { transform: scale(0.98); }
-.btn-call { background-color: var(--accent-blue); }
-.btn-wa { background-color: var(--whatsapp-green); }
+.btn{
+flex:1;padding:12px;border-radius:8px;
+color:white;text-align:center;font-weight:bold
+}
+.call{background:var(--blue)}
+.wa{background:var(--wa)}
 
-.footer { text-align:center; font-size:0.8rem; color:#555; margin-top:40px; }
-.social-links { margin-top:10px; display:flex; justify-content:center; gap:15px; }
-.social-links a { color: var(--accent-blue); font-size:1.3rem; transition:color 0.2s; }
-.social-links a:hover { color: var(--whatsapp-green); }
-
-@media(max-width:400px){ .grid { grid-template-columns:1fr; } }
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
+
 <body data-theme="dark">
 
 <header>
-    <div class="brand-name">ONRICH</div>
-    <div class="theme-toggle" id="themeToggle">🌙</div>
+  <div class="brand">ONRICH</div>
+  <div class="toggle" id="toggle">🌙</div>
 </header>
 
 <div class="hero">
-    <h1>Welcome to ONRICH</h1>
-    <p>Your trusted partner for Mobiles & Repair in Mumbai.</p>
+  <h1>ONRICH Mobile Shop</h1>
+  <p>Mobile Repair • Accessories • Used Phones</p>
 </div>
 
 <div class="container">
-    <h2>Our Services</h2>
-    <div class="grid">
-        <div class="card"><span class="card-icon">📱</span><div class="card-title">New & Used Phones</div></div>
-        <div class="card"><span class="card-icon">🛠️</span><div class="card-title">Express Repair</div></div>
-        <div class="card"><span class="card-icon">🎧</span><div class="card-title">Accessories</div></div>
-        <div class="card"><span class="card-icon">⚡</span><div class="card-title">Screen Replace</div></div>
-    </div>
 
-    <h2>Visit Our Branches</h2>
-    <div class="branch-card">
-        <div class="branch-title">📍 Kurla West</div>
-        <div class="address">Kurla West, Mumbai,<br>Maharashtra, India</div>
-        <a href="https://www.google.com/maps/search/?api=1&query=Kurla+West+Mumbai" class="get-directions" target="_blank">📍 Get Directions</a>
-    </div>
-    <div class="branch-card">
-        <div class="branch-title">📍 Chembur</div>
-        <div class="address">Chembur, Mumbai,<br>Maharashtra, India</div>
-        <a href="https://www.google.com/maps/search/?api=1&query=Chembur+Mumbai" class="get-directions" target="_blank">📍 Get Directions</a>
-    </div>
+<div class="offer">🎉 Today Offer: Screen Replacement 10% OFF</div>
 
-    <h2>Working Hours</h2>
-    <div class="branch-card">
-        <div class="address">🕘 Monday – Sunday<br>10:00 AM – 10:30 PM</div>
-    </div>
-
-    <div class="footer">
-        &copy; 2026 ONRICH Mobile Shop
-        <div class="social-links">
-            <a href="#" target="_blank">📘</a>
-            <a href="#" target="_blank">📸</a>
-            <a href="#" target="_blank">🐦</a>
-        </div>
-    </div>
+<h2>Our Services</h2>
+<div class="grid">
+  <div class="card"><span>📱</span>New & Used Phones</div>
+  <div class="card"><span>🛠️</span>Fast Repair</div>
+  <div class="card"><span>🔋</span>Battery Replace</div>
+  <div class="card"><span>🎧</span>Accessories</div>
 </div>
 
-<div class="sticky-footer">
-    <a href="tel:+918169343214" class="action-btn btn-call">📞 Call</a>
-    <a href="https://wa.me/918169343214?text=Hello%20ONRICH,%20I%20need%20mobile%20repair%20service" class="action-btn btn-wa">💬 WhatsApp</a>
+<h2>Repair Prices</h2>
+<div class="branch">
+📱 Screen Replace – From ₹999<br>
+🔋 Battery Change – From ₹699<br>
+🔊 Speaker Repair – From ₹399
+</div>
+
+<h2>Customer Reviews</h2>
+<div class="branch">
+  ⭐⭐⭐⭐⭐<br>
+  Fast service & genuine price<br>
+  <b>– Sehroz, Kurla</b>
+</div>
+<div class="branch">
+  ⭐⭐⭐⭐⭐<br>
+  Best mobile repair shop<br>
+  <b>– Imran, Chembur</b>
+</div>
+
+<h2>Gallery</h2>
+<div class="grid">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
+<img src="https://images.unsplash.com/photo-1580910051074-7c6a0a4c1e3f?w=500">
+</div>
+
+<h2>Quick Contact</h2>
+<form class="branch">
+<input placeholder="Your Name" required>
+<input placeholder="Phone Number" required>
+<textarea placeholder="Your Problem"></textarea>
+<button>Submit</button>
+</form>
+
+<h2>Our Branches</h2>
+<div class="branch"><b>📍 Kurla West</b><br>Mumbai</div>
+<div class="branch"><b>📍 Chembur</b><br>Mumbai</div>
+
+</div>
+
+<div class="sticky">
+<a href="tel:+918169343214" class="btn call">📞 Call</a>
+<a href="https://wa.me/918169343214" class="btn wa">💬 WhatsApp</a>
 </div>
 
 <script>
-const toggleBtn = document.getElementById('themeToggle');
-toggleBtn.addEventListener('click', () => {
-    const body = document.body;
-    if(body.getAttribute('data-theme') === 'dark'){
-        body.setAttribute('data-theme', 'light');
-        toggleBtn.textContent = '☀️';
-    } else {
-        body.setAttribute('data-theme', 'dark');
-        toggleBtn.textContent = '🌙';
-    }
-});
+const t=document.getElementById("toggle");
+const b=document.body;
+const saved=localStorage.getItem("theme");
+if(saved){
+  b.setAttribute("data-theme",saved);
+  t.textContent=saved==="dark"?"🌙":"☀️";
+}
+t.onclick=()=>{
+  let theme=b.getAttribute("data-theme")==="dark"?"light":"dark";
+  b.setAttribute("data-theme",theme);
+  localStorage.setItem("theme",theme);
+  t.textContent=theme==="dark"?"🌙":"☀️";
+}
 </script>
 
 </body>
-    </html>
+</html>
