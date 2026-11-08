@@ -6,74 +6,91 @@
 <meta name="theme-color" content="#121212">
 
 <title>ONRICH Mobile Shop | Mobile Repair Kurla & Chembur</title>
-
 <meta name="description" content="ONRICH Mobile Shop Mumbai. Mobile repair, screen replacement, accessories & used phones in Kurla West and Chembur.">
 <meta name="keywords" content="mobile repair Kurla, mobile shop Chembur, screen replacement Mumbai, phone repair near me">
 <meta name="author" content="ONRICH Mobile Shop">
 
+<!-- Preview when the link is shared on WhatsApp -->
+<meta property="og:title" content="ONRICH Mobile Shop | Mobile Repair Kurla & Chembur">
+<meta property="og:description" content="Mobile repair, screen replacement, accessories & used phones in Kurla West and Chembur.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+
+<!-- Helps Google understand this is a local shop -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobilePhoneStore",
+  "name": "ONRICH Mobile Shop",
+  "telephone": "+918169343214",
+  "areaServed": ["Kurla West, Mumbai", "Chembur, Mumbai"]
+}
+</script>
+
 <style>
 :root{
 --bg:#121212;--card:#1e1e1e;--text:#fff;--sub:#aaa;
---blue:#007BFF;--wa:#25D366;
+--blue:#007BFF;--wa:#25D366;--line:#333;
 }
 [data-theme="light"]{
---bg:#f5f5f5;--card:#fff;--text:#111;--sub:#555;
+--bg:#f5f5f5;--card:#fff;--text:#111;--sub:#555;--line:#ddd;
 }
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{font-family:system-ui;background:var(--bg);color:var(--text);padding-bottom:120px}
 h2{margin:30px 0 15px;border-left:4px solid var(--blue);padding-left:10px}
-header{position:sticky;top:0;z-index:100;background:var(--card);padding:15px;
-display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
-.brand{font-size:1.6rem;font-weight:800;color:var(--blue)}
-.toggle{cursor:pointer;font-size:1.2rem;background:#333;padding:8px 12px;border-radius:50%}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 
+header{position:sticky;top:0;z-index:100;background:var(--card);padding:15px;
+display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.brand{font-size:1.6rem;font-weight:800;color:var(--blue)}
+.toggle{width:auto;cursor:pointer;font-size:1.2rem;background:var(--line);color:var(--text);padding:8px 12px;border-radius:50%}
+
+/* dark layer on top of the photo so the white text is easy to read */
 .hero{
 margin:20px;border-radius:12px;padding:60px 20px;text-align:center;
-background:url("https://images.unsplash.com/photo-1512499617640-c2f999016e90?auto=format&fit=crop&w=900&q=80") center/cover;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1512499617640-c2f999016e90?auto=format&fit=crop&w=900&q=80") center/cover;
+background-color:#222;
 color:white
 }
+.hero p{margin-top:8px}
 
 .container{max-width:650px;margin:auto;padding:0 20px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.card{
-background:var(--card);padding:20px;border-radius:12px;text-align:center;
-border:1px solid #333
-}
+.card{background:var(--card);padding:20px;border-radius:12px;text-align:center;border:1px solid var(--line)}
 .card span{font-size:2rem;display:block;margin-bottom:10px}
 
 .branch{background:var(--card);padding:20px;border-radius:12px;margin-bottom:15px}
 .branch b{color:var(--blue)}
+.map{display:inline-block;margin-top:8px;color:var(--blue);font-weight:bold;text-decoration:none}
+.sub{color:var(--sub)}
 
 img{width:100%;border-radius:10px}
 
-input,textarea{
-width:100%;padding:10px;margin-bottom:10px;border-radius:8px;
-border:none;outline:none
-}
+input,textarea{width:100%;padding:12px;margin-bottom:10px;border-radius:8px;border:1px solid var(--line);outline:none;font:inherit}
+button{width:100%;padding:12px;border:none;border-radius:8px;background:var(--blue);color:white;font-weight:bold;font-size:1rem;cursor:pointer}
 
-button{
-width:100%;padding:12px;border:none;border-radius:8px;
-background:var(--blue);color:white;font-weight:bold
-}
+.offer{border:2px dashed var(--blue);background:var(--card);padding:15px;border-radius:12px;text-align:center;font-weight:bold}
 
-.offer{
-border:2px dashed var(--blue);
-background:var(--card);
-padding:15px;border-radius:12px;
-text-align:center;font-weight:bold
-}
-
-.sticky{
-position:fixed;bottom:0;left:0;width:100%;
-display:flex;gap:10px;padding:15px;background:var(--card)
-}
-.btn{
-flex:1;padding:12px;border-radius:8px;
-color:white;text-align:center;font-weight:bold
-}
+.sticky{position:fixed;bottom:0;left:0;width:100%;display:flex;gap:10px;padding:15px;background:var(--card);border-top:1px solid var(--line)}
+.btn{flex:1;padding:12px;border-radius:8px;color:white;text-align:center;font-weight:bold;text-decoration:none}
 .call{background:var(--blue)}
-.wa{background:var(--wa)}
+.wa{background:var(--wa);color:#04210f}
 
+select{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid var(--line);font:inherit}
+.price{font-size:1.8rem;font-weight:800;color:var(--blue);margin:6px 0 12px}
+.nav{display:flex;gap:10px;overflow-x:auto;padding:10px 20px;max-width:650px;margin:auto}
+.nav a{white-space:nowrap;background:var(--card);border:1px solid var(--line);color:var(--text);padding:6px 14px;border-radius:999px;text-decoration:none;font-size:.9rem}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.hero-btns .btn{flex:none;padding:12px 22px}
+.share{background:transparent;color:var(--blue);border:2px solid var(--blue);margin-top:25px}
+.top{display:none;position:fixed;right:15px;bottom:90px;width:44px;height:44px;border-radius:50%;padding:0;font-size:1.2rem;z-index:150}
+.top.show{display:block}
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 @media(max-width:420px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -82,19 +99,28 @@ color:white;text-align:center;font-weight:bold
 
 <header>
   <div class="brand">ONRICH</div>
-  <div class="toggle" id="toggle">🌙</div>
+  <button class="toggle" id="toggle" aria-label="Switch dark or light mode">🌙</button>
 </header>
 
 <div class="hero">
   <h1>ONRICH Mobile Shop</h1>
   <p>Mobile Repair • Accessories • Used Phones</p>
+  <div class="hero-btns">
+    <a href="tel:+918169343214" class="btn call">📞 Call now</a>
+    <a href="https://wa.me/918169343214" target="_blank" rel="noopener" class="btn wa">💬 WhatsApp</a>
+  </div>
 </div>
+
+<nav class="nav" aria-label="Page sections">
+  <a href="#services">Services</a><a href="#prices">Prices</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a><a href="#branches">Branches</a>
+</nav>
 
 <div class="container">
 
+<!-- TODO: keep this offer only while it is really running -->
 <div class="offer">🎉 Today Offer: Screen Replacement 10% OFF</div>
 
-<h2>Our Services</h2>
+<h2 id="services">Our Services</h2>
 <div class="grid">
   <div class="card"><span>📱</span>New & Used Phones</div>
   <div class="card"><span>🛠️</span>Fast Repair</div>
@@ -102,14 +128,28 @@ color:white;text-align:center;font-weight:bold
   <div class="card"><span>🎧</span>Accessories</div>
 </div>
 
-<h2>Repair Prices</h2>
+<h2 id="prices">Repair Prices</h2>
 <div class="branch">
 📱 Screen Replace – From ₹999<br>
 🔋 Battery Change – From ₹699<br>
 🔊 Speaker Repair – From ₹399
+<p class="sub" style="margin-top:8px">Final price depends on your phone model.</p>
 </div>
 
-<h2>Customer Reviews</h2>
+<div class="branch">
+  <b>Check the starting price</b>
+  <select id="service" aria-label="Choose a repair">
+    <option value="">Choose a repair...</option>
+    <option value="Screen Replace|999">Screen Replace</option>
+    <option value="Battery Change|699">Battery Change</option>
+    <option value="Speaker Repair|399">Speaker Repair</option>
+  </select>
+  <div class="price" id="price">Choose a repair</div>
+  <button type="button" id="ask">Ask on WhatsApp</button>
+</div>
+
+<!-- TODO: keep these reviews only if they are from real customers who agreed -->
+<h2 id="reviews">Customer Reviews</h2>
 <div class="branch">
   ⭐⭐⭐⭐⭐<br>
   Fast service & genuine price<br>
@@ -123,30 +163,40 @@ color:white;text-align:center;font-weight:bold
 
 <h2>Gallery</h2>
 <div class="grid">
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
-<img src="https://images.unsplash.com/photo-1580910051074-7c6a0a4c1e3f?w=500">
+  <img loading="lazy" alt="Smartphones on display" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" onerror="this.remove()">
+  <img loading="lazy" alt="Mobile phone repair work" src="https://images.unsplash.com/photo-1580910051074-7c6a0a4c1e3f?w=500" onerror="this.remove()">
 </div>
 
-<h2>Quick Contact</h2>
-<form class="branch">
-<input placeholder="Your Name" required>
-<input placeholder="Phone Number" required>
-<textarea placeholder="Your Problem"></textarea>
-<button>Submit</button>
+<h2 id="contact">Quick Contact</h2>
+<p class="sub" style="margin-bottom:10px">Fill this form and it opens WhatsApp with your message ready to send.</p>
+<form class="branch" id="form">
+  <input name="name" placeholder="Your Name" aria-label="Your name" required>
+  <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone number" required>
+  <textarea name="problem" placeholder="Your Problem (for example: cracked screen, iPhone 11)" aria-label="Your problem"></textarea>
+  <button type="submit">Send on WhatsApp</button>
 </form>
 
-<h2>Our Branches</h2>
-<div class="branch"><b>📍 Kurla West</b><br>Mumbai</div>
-<div class="branch"><b>📍 Chembur</b><br>Mumbai</div>
+<h2 id="branches">Our Branches</h2>
+<!-- TODO: replace the map links with your exact shop address if you have it -->
+<div class="branch"><b>📍 Kurla West</b><br>Mumbai<br>
+  <a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ONRICH+Mobile+Shop+Kurla+West+Mumbai">Open in Google Maps</a></div>
+<div class="branch"><b>📍 Chembur</b><br>Mumbai<br>
+  <a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ONRICH+Mobile+Shop+Chembur+Mumbai">Open in Google Maps</a></div>
+
+<button class="share" id="share" type="button">Share this shop</button>
 
 </div>
+
+<button class="top" id="top" type="button" aria-label="Back to top">↑</button>
 
 <div class="sticky">
 <a href="tel:+918169343214" class="btn call">📞 Call</a>
-<a href="https://wa.me/918169343214" class="btn wa">💬 WhatsApp</a>
+<a href="https://wa.me/918169343214" target="_blank" rel="noopener" class="btn wa">💬 WhatsApp</a>
 </div>
 
 <script>
+document.documentElement.classList.add("js");
+/* Dark / light mode, remembered for next visit */
 const t=document.getElementById("toggle");
 const b=document.body;
 const saved=localStorage.getItem("theme");
@@ -159,7 +209,55 @@ t.onclick=()=>{
   b.setAttribute("data-theme",theme);
   localStorage.setItem("theme",theme);
   t.textContent=theme==="dark"?"🌙":"☀️";
-}
+};
+
+/* Price checker: shows the starting price and opens WhatsApp */
+const sel=document.getElementById("service");
+const priceBox=document.getElementById("price");
+sel.onchange=()=>{
+  priceBox.textContent=sel.value?"From ₹"+sel.value.split("|")[1]:"Choose a repair";
+};
+document.getElementById("ask").onclick=()=>{
+  let msg="Hello ONRICH, I want to know the price for a repair.";
+  if(sel.value){
+    const [name,price]=sel.value.split("|");
+    msg="Hello ONRICH, I want "+name+" (from ₹"+price+"). My phone model is: ";
+  }
+  window.open("https://wa.me/918169343214?text="+encodeURIComponent(msg),"_blank","noopener");
+};
+
+/* Cards fade in when you scroll to them */
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("show"); io.unobserve(en.target); } });
+},{threshold:0.15});
+document.querySelectorAll(".card,.branch,.offer,.container img").forEach(el=>{
+  el.classList.add("reveal"); io.observe(el);
+});
+
+/* Share button: native share on phones, copy link on computers */
+const shareBtn=document.getElementById("share");
+shareBtn.onclick=async()=>{
+  const data={title:document.title,url:location.href};
+  try{
+    if(navigator.share){ await navigator.share(data); }
+    else{ await navigator.clipboard.writeText(location.href); shareBtn.textContent="Link copied!"; }
+  }catch(e){}
+};
+
+/* Back to top button */
+const topBtn=document.getElementById("top");
+window.addEventListener("scroll",()=>topBtn.classList.toggle("show",window.scrollY>600));
+topBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+
+/* Contact form: build a WhatsApp message from what the customer typed */
+document.getElementById("form").addEventListener("submit",(e)=>{
+  e.preventDefault();
+  const d=new FormData(e.target);
+  const msg="Hello ONRICH, my name is "+d.get("name")+
+    ". My phone number is "+d.get("phone")+
+    ". Problem: "+(d.get("problem")||"not written");
+  window.open("https://wa.me/918169343214?text="+encodeURIComponent(msg),"_blank","noopener");
+});
 </script>
 
 </body>
